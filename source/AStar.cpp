@@ -56,6 +56,16 @@ void AStar::Generator::addCollision(Vec2i coordinates_)
     walls.push_back(coordinates_);
 }
 
+AStar::Vec2i AStar::Generator::getWorldSize()
+{
+    return worldSize;
+}
+
+AStar::CoordinateList AStar::Generator::getCollisions()
+{
+    return walls;
+}
+
 void AStar::Generator::removeCollision(Vec2i coordinates_)
 {
     auto it = std::find(walls.begin(), walls.end(), coordinates_);
